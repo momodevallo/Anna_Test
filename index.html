@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Styles de base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: linear-gradient(45deg, #1d2b64, #f8cdda);
+            padding: 2em;
+            color: #fff;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .card p {
+            color: #777;
+        }
+
+        /* Animation pour le header */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Style du bouton */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur Mon Portfolio</h1>
+        <p>Découvrez mes projets et mon parcours</p>
+    </header>
+
+    <section class="container">
+        <!-- Carte de projet 1 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Projet 1">
+            <div class="card-content">
+                <h3>Projet 1</h3>
+                <p>Ce projet explore les concepts de l'UX/UI design en utilisant HTML, CSS et JavaScript.</p>
+                <a href="#" class="button">Voir le projet</a>
+            </div>
+        </div>
+        <!-- Carte de projet 2 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Projet 2">
+            <div class="card-content">
+                <h3>Projet 2</h3>
+                <p>Développement d'une application web pour la gestion des tâches en équipe.</p>
+                <a href="#" class="button">Voir le projet</a>
+            </div>
+        </div>
+        <!-- Carte de projet 3 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Projet 3">
+            <div class="card-content">
+                <h3>Projet 3</h3>
+                <p>Utilisation de l'intelligence artificielle pour l'analyse de données dans un projet machine learning.</p>
+                <a href="#" class="button">Voir le projet</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; background: #333; color: #fff;">
+        <p>© 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
